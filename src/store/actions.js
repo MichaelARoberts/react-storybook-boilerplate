@@ -5,4 +5,9 @@ actions.increment = payload => ({
   payload
 });
 
+actions.setPlanets = planets => ({
+  type: "SET_PLANETS",
+  planets
+})
+
 export default actions;

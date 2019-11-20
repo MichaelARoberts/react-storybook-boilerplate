@@ -1,11 +1,12 @@
 import React from "react";
 import "./App.scss";
 import "./components/Counter/Counter";
-import Counter from "./components/Counter/Counter";
+import DataCall from "./components/DataCall/DataCall";
+
 function App() {
   return (
     <div className="App">
-      <Counter amount={1} />
+      <DataCall />
     </div>
   );
 }
