@@ -14,7 +14,7 @@ const Counter = props => {
   return (
     <div>
       <p>The counter is at {state.count}</p>
-      <button onClick={() => dispatch(actions.increment({ amount: 30 }))}>
+      <button onClick={() => dispatch(actions.increment({ amount: props.amount }))}>
         +
       </button>
     </div>
