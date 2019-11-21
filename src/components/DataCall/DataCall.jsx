@@ -12,7 +12,7 @@ const DataCall = props => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    async function fetchData() {
+    async function fetchData () {
       const res = await axios.get('https://jsonplaceholder.typicode.com/todos')
       dispatch({ type: "SET_DATA", data: res.data })
     }
@@ -22,9 +22,9 @@ const DataCall = props => {
   }, [])
 
   return (
-    <div>
-      <h1>{state.data[0]}</h1>
-    </div>
+    <>
+      <ul>{state.data.length > 0 && state.data.map(p => (<li>{p.id}</li>))}</ul>
+    </>
   );
 };
 
