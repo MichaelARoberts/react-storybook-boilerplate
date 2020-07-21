@@ -1,12 +1,10 @@
-import React from "react";
-import "./HelloWorld.scss";
+import React from 'react'
+import './HelloWorld.scss'
 
-const HelloWorld = props => {
+export default function HelloWorld({msg}) {
   return (
     <div className="hello-world">
-      <p>{props.msg}</p>
+      <p>{msg}</p>
     </div>
-  );
-};
-
-export default HelloWorld;
+  )
+}

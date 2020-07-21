@@ -1,13 +1,13 @@
-const actions = {};
+const actions = {}
 
 actions.increment = payload => ({
-  type: "INCREMENT",
+  type: 'INCREMENT',
   payload
-});
+})
 
-actions.setPlanets = planets => ({
-  type: "SET_PLANETS",
+actions.setData = planets => ({
+  type: 'SET_DATA',
   planets
 })
 
-export default actions;
+export default actions

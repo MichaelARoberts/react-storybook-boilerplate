@@ -1,24 +1,18 @@
 import React from "react";
-import { useDispatch, useSelector, shallowEqual } from "react-redux";
+import { useDispatch, useSelector} from "react-redux";
 import actions from "../../store/actions";
 
-const Counter = props => {
-  const state = useSelector(
-    state => ({
-      count: state.count
-    }),
-    shallowEqual
-  );
-  const dispatch = useDispatch();
+
+export default function Counter({amount}) {
+  const count = useSelector(state => state.count)
+  const dispatch = useDispatch()
 
   return (
     <div>
-      <p>The counter is at {state.count}</p>
-      <button onClick={() => dispatch(actions.increment({ amount: props.amount }))}>
+      <p>The counter is at {count}</p>
+      <button onClick={() => dispatch(actions.increment({ amount: amount }))}>
         +
       </button>
     </div>
-  );
-};
-
-export default Counter;
+  )
+}
